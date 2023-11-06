@@ -5,8 +5,7 @@
 // Historik
 #historik {
     background-color: $raisinblack;
-    width: 100%;
-    width: 375px;
+    // width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -65,7 +64,7 @@
             
         }
         ::-webkit-datetime-edit-text {
-            color:$antiflashwhit;
+            color: $antiflashwhite;
             font-weight: 300;
             font-size: 1rem;
             line-height: 18.75;
@@ -105,11 +104,11 @@
         font-size: 1rem;
         line-height: 18.75px;
         text-align: center;
-        margin-bottom: 15px;                        
+        margin-bottom: 15px;                
     }
 
 
-    #prices {
+    #historikprices {
         list-style-type: none;
         display: flex;
         flex-direction: column;

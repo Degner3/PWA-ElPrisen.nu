@@ -45,6 +45,14 @@ body {
   box-shadow: 0px 0px 8px 2px rgba(85, 236, 32, 0.5);
   color: #58ed21;
 }
+@keyframes glow1 {
+  from {
+    box-shadow: 0 0 50px #55ec20, 0 0 20px #55ec20, 0 0 30px #55ec20, 0 0 40px #55ec20, 0 0 50px #55ec20, 0 0 60px #55ec20, 0 0 70px #55ec20;
+  }
+  to {
+    box-shadow: 0 0 20px #55ec20, 0 0 30px #55ec20, 0 0 40px #55ec20, 0 0 50px #55ec20, 0 0 60px #55ec20, 0 0 70px #55ec20, 0 0 80px #55ec20;
+  }
+}
 .nav div p {
   color: #58ed21;
   font-weight: 500px;
@@ -102,6 +110,7 @@ body {
 .footer div {
   display: flex;
   justify-content: center;
+  text-align: left;
 }
 .footer div p {
   font-size: 0.875rem;
@@ -134,30 +143,10 @@ body {
   border-radius: 10px;
 }
 .errpage .errorwrapper h2 {
-  color: #201E1E;
+  color: #EBEBEB;
   font-size: 80px;
 }
 .errpage .errorwrapper h3 {
-  color: var(--eerieblack);
+  color: #EBEBEB;
   font-size: 25px;
-}
-.errpage .errorwrapper p {
-  color: var(--eerieblack);
-  font-size: 20px;
-}
-.errpage .errorwrapper a {
-  text-align: center;
-  text-decoration: none;
-  color: var(--eerieblack);
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28.13px;
-  border-radius: 3px;
-  padding: 6px 18px;
-  transition: all ease-out 0.3s;
-  cursor: pointer;
-}
-.errpage .errorwrapper a:hover {
-  color: red;
-  transition: all ease-out 0.3s;
 }/*# sourceMappingURL=offline.css.map */

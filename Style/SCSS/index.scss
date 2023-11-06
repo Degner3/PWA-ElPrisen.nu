@@ -6,7 +6,6 @@
 #ligenu {
     background-color: $raisinblack;
     width: 100%;
-    // width: 375px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -14,7 +13,7 @@
     padding-top: 19px;
     padding-bottom: 185px;
 
-    // border: 2px solid  $eerieblack;
+    // max-width: 375px;
 
     .settinglink {
         color: $sgbusgreen;

@@ -6,47 +6,101 @@
     <title>Elprisen.nu</title>
     <link rel="icon" type="image/x-icon" href="/assets/appIcons//mainIcon.ico">
     <!-- CSS -->
-    <link rel="stylesheet" href="/Style/SCSS/Global.scss">
-    <link rel="stylesheet" href="/Style/css/Historik.css">
-    <link rel="stylesheet" href="/Style/css/index.css">
-    <link rel="stylesheet" href="/Style/css/Oversigt.css">
-
+    <link rel="stylesheet" href="/Style/css/dashboard.css">
+    <link rel="stylesheet" href="/Style/css/Global.css">
+    
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <!-- JS -->
+    <script src="/JS/MainDashboard.js" defer></script>
+    <script src="/JS/Now.js" defer></script>
+    <script src="/JS/oversigt.js" defer></script>
+    <script src="/JS/historik.js" defer></script>
     
+    <!-- SW -->
     <link rel="manifest" href="/manifest.json">
     <script src="/sw.js" defer></script>
 </head>
 <body>
-    <nav class="nav">
+    <nav class="navdash">
         <div>
-            <a href="/index.html">
+            <a class="icon" href="/index.html">
                 <img src="/assets/appIcons/windows11/Square150x150Logo.scale-100.png" alt="logo">
             </a>
-            <p>ELPrisen.nu</p>
+            <div>
+                <a class="text" href="/index.html">
+                    <p>ELPrisen.nu</p>
+                </a>
+            </div>
         </div>
         <ul id="ul">
             <li><a href="/oversigt.html">Oversigt</a></li>
             <li><a href="/index.html">Lige nu</a></li>
             <li><a href="/historik.html">Historik</a></li>
         </ul>
-        <i class="fa-solid fa-gear"></i>
+        <div>
+           <a class="settinglink" href="/settings.html">
+                <i class="fa-solid fa-gear"></i>
+            </a> 
+        </div>
     </nav>
     <main>
+        <div class="box1">
+            <!-- Index - Now HTML -->
+            <section id="ligenu"></section>
+
+            <!-- LOW - HIGH -->
+            <div class="divcontianer">
+                <div>
+                    <div class="bigcircle">
+                        <div id="lowcontent"></div>
+                    </div>
+                    <p>laveste pris</p>
+                </div>
+                <div>
+                    <div class="bigcircle">
+                        <div id="highcontent"></div>
+                    </div>
+                    <p>højeste pris</p>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer class="footerdash">
+                <div>
+                    <p>Alle priser er<span> exsl. moms</span> og afgifter</p>
+                </div>
+                <div>
+                    <p>Du vises lige nu priserne for region <span id="selectedregion">Vest Danmark</span></p>
+                </div>
+            </footer>
+        </div>
+
+        <div class="box2">
+            <!-- Oversigt - HTML -->
+            <section id="oversigt">
+                <h1>Oversigt</h1>
+                <ul id="oversigtprices"></ul>
+            </section>
+        </div>
+
+        <div class="box3">
+            <!-- Historik - HTML -->
+            <section id="historik">
+                <a class="settinglink" href="/settings.html">
+                  <i class="fa-solid fa-gear"></i>
+                </a>
+                <h1>Historik</h1>
+                <div id="calender">
+                  <input type="date" name="selected_date" id="pickdate" value="2018-07-22" min="2022-11-01" max="2018-12-31">
+                </div>
+                <p id="textdate"></p>
+                <ul id="historikprices"></ul>
+            </section>
+        </div>
+        
         
 
     </main>
-    <footer class="footer">
-        <div>
-            <p>Priserne er <span>ex. moms</span> og afgifter</p>
-        </div>
-        <div>
-            <p>Du vises lige nu priserne for <span>Vest Danmark</span></p>
-        </div>
-    </footer>
-
-    
 </body>
 </html>

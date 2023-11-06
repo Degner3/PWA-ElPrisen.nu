@@ -110,6 +110,7 @@ body {
 .footer div {
   display: flex;
   justify-content: center;
+  text-align: left;
 }
 .footer div p {
   font-size: 0.875rem;

@@ -45,7 +45,7 @@ let currentDay  = new Date().toLocaleDateString(undefined, {
 
 // Hent data for i dag fra API'en
 const fetchDataToday = () => {
-  let apiUrl = `https://www.elprisenligenu.dk/api/v1/prices/${currentYear}/${currentMonth}-${currentDay}_DK2.json`
+  let apiUrl = `https://www.elprisenligenu.dk/api/v1/prices/${currentYear}/${currentMonth}-${currentDay}_DK1.json`
 
   fetch(apiUrl)
   .then(res => res.json())

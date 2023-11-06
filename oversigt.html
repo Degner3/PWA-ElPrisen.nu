@@ -16,6 +16,7 @@
     <script src="/JS/oversigt.js" defer></script>
     <script src="/JS/navlink.js" defer></script>
     <script src="/JS/settings.js" defer></script>
+    <!-- SW -->
     <link rel="manifest" href="/manifest.json">
     <script src="/sw.js" defer></script>
 </head>
@@ -54,7 +55,7 @@
                     <p>højeste pris</p>
                 </div>
             </div>
-            <ul id="prices"></ul>
+            <ul id="oversigtprices"></ul>
         </section>
     </main>
     <footer class="footer">
@@ -62,7 +63,7 @@
             <p>Priserne er <span>ex. moms</span> og afgifter</p>
         </div>
         <div>
-            <p>Du vises lige nu priserne for <span>Vest Danmark</span></p>
+            <p>Du vises lige nu priserne for <span id="selectedregion">Vest Danmark</span></p>
         </div>
     </footer>
     

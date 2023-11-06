@@ -1,0 +1,598 @@
+
+@import '../SCSS/Global.scss';
+
+
+
+
+// Navigation - Dashboard
+.navdash {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 16px 5px 16px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $eerieblack;
+    
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+
+        .icon {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            transition: 0.2 ease-in;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .icon:hover {
+            box-shadow: 0px 0px 8px 2px  rgba(85, 236, 32, 0.5);
+            color: $sgbusgreen;
+            // animation: glow1 1s ease-in-out infinite alternate;
+        }
+
+        div {
+
+            .text {
+                text-decoration: none;
+
+
+                p {
+                    color: $sgbusgreen;
+                    font-weight: 500px;
+                    font-size: 1rem;
+                    line-height: 18.75px;
+                    // display: none;
+
+
+                }
+            }
+        }
+
+        // @keyframes glow1 {
+        //     from {
+        //       box-shadow: 0 0 50px #55ec20, 0 0 20px #55ec20, 0 0 30px #55ec20, 0 0 40px #55ec20, 0 0 50px #55ec20, 0 0 60px #55ec20, 0 0 70px #55ec20;
+        //     }
+            
+        //     to {
+        //       box-shadow: 0 0 20px #55ec20, 0 0 30px #55ec20, 0 0 40px #55ec20, 0 0 50px #55ec20, 0 0 60px #55ec20, 0 0 70px #55ec20, 0 0 80px #55ec20;
+        //     }
+        // }
+        
+    }
+
+    ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        display: none;
+
+        li {
+            display: flex;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+                color: $antiflashwhite;
+                font-weight: 500px;
+                font-size: 1rem;
+                line-height: 18.75px;
+                transition: 0.2s ease-in;
+
+            }
+
+            a:hover {
+                color: $sgbusgreen;
+                animation: glow 1s ease-in-out infinite alternate;
+            }
+
+            @keyframes glow {
+                from {
+                  text-shadow: 0 0 10px #55ec20, 0 0 20px #55ec20, 0 0 30px #55ec20, 0 0 40px #55ec20, 0 0 50px #55ec20, 0 0 60px #55ec20, 0 0 70px #55ec20;
+                }
+                
+                to {
+                  text-shadow: 0 0 20px #55ec20, 0 0 30px #55ec20, 0 0 40px #55ec20, 0 0 50px #55ec20, 0 0 60px #55ec20, 0 0 70px #55ec20, 0 0 80px #55ec20;
+                }
+              }
+
+        }
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        margin-right: 29px;
+        
+        .settinglink {
+            color: $sgbusgreen;
+            font-size: 23px;
+            cursor: pointer;
+            // display: none;
+        }
+
+        .settinglink:hover {
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+        
+    }
+
+
+}
+
+
+// Main - ALL Data
+main {
+    display: grid;
+    grid-template-columns: 307px 307px 307px;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    padding-bottom: 10px;
+
+
+    // Section 1
+    .box1 {
+        width: 100%;
+
+        #ligenu {
+            background-color: $raisinblack;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            // padding-top: 19px
+            // padding-bottom: 60px;
+            .settinglink {
+                display: none;
+            }
+        
+            h1 {
+                color: $antiflashwhite;
+                font-weight: 300;
+                font-size: 2rem;
+                line-height: 37.5px;
+                text-align: center;
+                margin-top: 23px;
+                margin-bottom: 54px;
+                text-transform: uppercase;
+            }
+        
+            .bigcircle {
+                background-color: $eerieblack;
+                width: 277px;
+                height: 277px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 8px 2px rgba(200, 200, 200, 0.2);
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                justify-items: center;
+                align-items: center;
+        
+                .midcircle {
+                    width: 244px;
+                    height: 244px;
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 8px 1px rgba(20, 20, 20, 05);
+                    border: dashed 2px rgba(85, 236, 32, 0.25);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+        
+                    #priscontent {
+                        width: 217px;
+                        height: 217px;
+                        border-radius: 50%;
+                        box-shadow: 0px 0px 8px 2px rgba(20, 20, 20, 0.2);
+                        border: dashed 2px rgba(85, 236, 32, 0.50);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        color: $sgbusgreen;
+        
+                        h4 {
+                            display: flex;
+                            font-weight: 700;
+                            font-size: 2rem;
+        
+                            p {
+                                margin-left: 6px;
+        
+                            }
+                        }
+                    }
+                }
+            }
+        
+            #currenttime {
+                color: $sgbusgreen;
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 18.75px;
+                text-align: center;
+                margin-top: 26px;
+            }
+        
+        }
+
+        .divcontianer {
+            display: flex;
+            justify-content: center;
+            // grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 19px;
+    
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+    
+                .bigcircle {
+                // display: inline-block;
+                width: 112px;
+                height: 112px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 4px 2px rgba(200, 200, 200, 0.2);
+                // margin: auto;
+                display: flex;
+                background-color: #201E1E;
+                margin-bottom: 5px;
+    
+    
+                    #lowcontent {
+                        width: 96px;
+                        height: 96px;
+                        border-radius: 50%;
+                        box-shadow: 0px 0px 8px 2px rgba(20, 20, 20, 0.2);
+                        border: dashed 2px rgba(85, 236, 32, 0.50);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        color: $antiflashwhite;
+    
+                        #h4 {
+                            font-weight: 300;
+                            font-size: 1rem;
+                            line-height: 18.75px;
+                            margin-bottom: 5px;
+                            
+                            p {
+                                display: inline;
+                                margin-left: 5px;
+                                font-size: 1rem;
+                                line-height: 18.75px;
+                            }
+                        }
+    
+                        h5 {
+                            font-weight: 300;
+                            font-size: 0.625rem;
+                            line-height: 11.72px;
+    
+                        }
+                        
+                    }
+    
+                    #highcontent {
+                        width: 96px;
+                        height: 96px;
+                        border-radius: 50%;
+                        box-shadow: 0px 0px 8px 2px rgba(20, 20, 20, 0.2);
+                        border: dashed 2px rgba(85, 236, 32, 0.50);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        color: $antiflashwhite;
+    
+                        #h4 {
+                            font-weight: 300;
+                            font-size: 1rem;
+                            line-height: 18.75px;
+                            margin-bottom: 5px;
+                            
+                            p {
+                                display: inline;
+                                margin-left: 5px;
+                                font-size: 1rem;
+                                line-height: 18.75px;
+                            }
+                        }
+    
+                        h5 {
+                            font-weight: 300;
+                            font-size: 0.625rem;
+                            line-height: 11.72px;
+    
+                        }
+    
+                    }
+                
+                }
+    
+                p {
+                    color: $antiflashwhite;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    font-size: 0.875rem;
+                    line-height: 16.41px;
+                    text-align: center;
+                    margin-top: 5px;
+    
+    
+                    
+                }
+            }
+    
+        }
+
+        .footerdash {
+            width: 100%;
+            margin: 0 auto;
+            padding: 22px 50px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            justify-content: center;
+            gap: 5px;
+            padding-top: 100px;
+            // background-color: $eerieblack;
+            color: $antiflashwhite;
+            
+            div {
+                display: flex;
+                justify-content: flex-start;
+                text-transform: uppercase;
+                width: 300px;
+        
+                p {
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    line-height: 16.41px;
+                    align-items: center;
+        
+                    span {
+                        font-size: 0.875rem;
+                        font-weight: 400;
+                        line-height: 16.41px;
+                        color: $sgbusgreen;
+                    }
+                }
+            }
+        }
+    }
+
+    // Section 2
+    .box2 {
+        width: 100%;
+
+        #oversigt {
+            background-color: $raisinblack;
+            width: 100%;
+            // width: 375px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            // padding-top: 19px;
+            // padding-bottom: 10px;
+        
+            h1 {
+                color: $antiflashwhite;
+                font-weight: 300;
+                font-size: 2rem;
+                line-height: 37.5px;
+                text-align: center;
+                margin-top: 26px;
+                margin-bottom: 49px;
+                text-transform: uppercase;
+            }
+        
+            #oversigtprices {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+        
+                li {
+                    width: 100%;
+                    background-color: $eerieblack;
+                    width: 305px;
+                    margin: 0 auto;
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    align-content: center;
+                    grid-template-columns: 1fr 1fr;
+                    box-shadow: 0px 0px 8px 4px rgba(91, 91, 91, 0.25);
+                    padding: 10px 16px;
+                    border-radius: 8px;
+        
+                    .time {
+                        color: $antiflashwhite;
+                        font-weight: 400;
+                        font-size: 0.938rem;
+                        line-height: 17.58px;
+                        text-align: center;
+                    }
+        
+                    .price {
+                        color: $sgbusgreen;
+                        font-weight: 400;
+                        font-size: 0.938rem;
+                        line-height: 17.58px;
+                        text-align: center;
+                    }
+                    
+                }
+        
+        
+            }
+        }
+    }
+
+    // Section 3
+    .box3 {
+        width: 100%;
+
+        #historik {
+            background-color: $raisinblack;
+            // width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            // padding-top: 19px;
+        
+            // border: 2px solid $eerieblack;
+        
+            .settinglink {
+                display: none;
+            }
+        
+            h1 {
+                color: $antiflashwhite;
+                font-weight: 300;
+                font-size: 2rem;
+                line-height: 37.5px;
+                text-align: center;
+                margin-top: 23px;
+                margin-bottom: 49px;
+                text-transform: uppercase;
+            }
+        
+            #calender {
+                width: 100%;
+                background-color: $eerieblack;
+                width: 305px;
+                display: flex;
+                margin: 0 auto;
+                box-shadow: 0px 0px 8px 4px rgba(91, 91, 91, 0.25);
+                padding: 12px 29px;
+                border-radius: 8px;
+                margin-bottom: 53px;
+           
+                #pickdate {
+                    width: 305px;
+                    background-color: $eerieblack;
+                    border: none;
+                    
+                }
+                ::-webkit-datetime-edit-text {
+                    color: $antiflashwhite;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    line-height: 18.75;
+                     
+                }
+                ::-webkit-datetime-edit-month-field {
+                    color:$antiflashwhite;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    line-height: 18.75;
+                }
+                ::-webkit-datetime-edit-day-field {
+                    color: $antiflashwhite;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    line-height: 18.75;
+                }
+                ::-webkit-datetime-edit-year-field {
+                    color:$antiflashwhite;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    line-height: 18.75;
+                }
+                ::-webkit-calendar-picker-indicator {
+                    background-color: $sgbusgreen;
+                    border-radius: 25%;
+                    font-size: 1.6rem;
+                    cursor: pointer;
+                } 
+                
+                
+            }
+        
+            #textdate {
+                color: $antiflashwhite;
+                font-weight: 300;
+                font-size: 1rem;
+                line-height: 18.75px;
+                text-align: center;
+                margin-bottom: 15px;                
+            }
+        
+        
+            #historikprices {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+        
+                li {
+                    width: 100%;
+                    background-color: $eerieblack;
+                    width: 305px;
+                    margin: 0 auto;
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    align-content: center;
+                    grid-template-columns: 1fr 1fr;
+                    box-shadow: 0px 0px 8px 4px rgba(91, 91, 91, 0.25);
+                    padding: 10px 16px;
+                    border-radius: 8px;
+        
+                    .time {
+                        color: $antiflashwhite;
+                        font-weight: 400;
+                        font-size: 0.938rem;
+                        line-height: 17.58px;
+                        text-align: center;
+        
+                    }
+        
+                    .price {
+                        color: $sgbusgreen;
+                        font-weight: 400;
+                        font-size: 0.938rem;
+                        line-height: 17.58px;
+                        text-align: center;
+                        
+                    }
+                    
+                }
+        
+        
+            }
+        
+        
+            
+        }
+
+
+    }
+}
+

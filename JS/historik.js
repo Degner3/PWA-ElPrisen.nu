@@ -2,12 +2,12 @@
 
 
 // Section - Historik
-const myApp = document.getElementById("historik")
+const myHistorical = document.getElementById("historik")
 
 
 
 // En funktion, der returnerer en farve baseret på et givet tal (number).
-const getColor = (number) => {
+const getHistoricalColor = (number) => {
   let color;
 
   switch (true) {
@@ -46,7 +46,7 @@ function fetchHistoricalPrices() {
   const textdate = dateInput.value;
 
   const [selectedYear, selectedMonth, selectedDay] = textdate.split("-");
-  const URL = `https://www.elprisenligenu.dk/api/v1/prices/${selectedYear}/${selectedMonth}-${selectedDay}_DK2.json`;
+  const URL = `https://www.elprisenligenu.dk/api/v1/prices/${selectedYear}/${selectedMonth}-${selectedDay}_DK1.json`;
 
 
   fetch(URL)
@@ -80,7 +80,7 @@ function pickDate() {
 
 // Funktionen displayHistoricalPrices viser de hentede historiske priser på siden.
 function displayHistoricalPrices(data) {
-  const ListPrices = document.getElementById("prices");
+  const ListPrices = document.getElementById("historikprices");
   if (!ListPrices) {
     console.error("ListPrices ikke fundet");
     return;
@@ -91,11 +91,11 @@ function displayHistoricalPrices(data) {
   for (let hour = 0; hour < data.length; hour++) {
     const price = Math.round(data[hour].DKK_per_kWh * 1000) / 1000;
     const currentHour = hour < 10 ? `0${hour}` : `${hour}`;
-    const priceColorStyle = getColor(price);
+    const priceColorStyle = getHistoricalColor(price);
 
     priceHTML += `<li>
       <p class="time">kl. ${currentHour}:00</p>
-      <p class="price" style="${priceColorStyle}">kl ${price} kr</p>
+      <p class="price" style="${priceColorStyle}">${price} kr</p>
     </li><br>`;
   }
 

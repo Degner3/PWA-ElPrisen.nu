@@ -1,11 +1,11 @@
 
 
 // Section - Lige nu
-const myApp = document.getElementById("oversigt")
+const myOverview = document.getElementById("oversigt")
 
 
 // Funktion til at bestemme farver baseret på prisen
-const getColor = (number) => {
+const getOverviewColor = (number) => {
 
   if (number <= 0.2) {
     return 'color: #68CC31;'; // Lime Green
@@ -22,19 +22,19 @@ const getColor = (number) => {
 
 
 // Hent aktuelt år, måned og dag
-let currentYear = new Date().getFullYear();
-let currentMonth = new Date().toLocaleDateString(undefined, {
-    month: "2-digit"
-})
-let currentDay  = new Date().toLocaleDateString(undefined, {
-  day: "2-digit",
-}).replace(".", "")
+
 
 
 // Funktion til at hente elpriser fra en ekstern kilde
 function fetchOverviewPrices() {
-
-    const URL = `https://www.elprisenligenu.dk/api/v1/prices/${currentYear}/${currentMonth}-${currentDay}_DK1.json`;
+let cYear = new Date().getFullYear();
+let cMonth = new Date().toLocaleDateString(undefined, {
+    month: "2-digit"
+})
+let cDay  = new Date().toLocaleDateString(undefined, {
+  day: "2-digit",
+}).replace(".", "")
+    const URL = `https://www.elprisenligenu.dk/api/v1/prices/${cYear}/${cMonth}-${cDay}_DK1.json`;
   
   
     fetch(URL)
@@ -86,29 +86,32 @@ const lowHighData = (data) => {
     <h5>PR. KWH</h5>`;
 
  
-  console.log(highPrice.innerHTML);
+  // console.log(highPrice.innerHTML);
 
 }
 
 // Funktion til at oprette en liste over elpriser
 const OverviewListPrice = (data) => {
-  const ListPrices = document.getElementById('prices')
+  const ListPrices = document.getElementById('oversigtprices')
 
   let priceHTML = "";
 
   for (let hour = 0; hour < data.length; hour++) {
     const price = Math.round(data[hour].DKK_per_kWh * 1000) / 1000;
     const currentHour = hour < 10 ? `0${hour}` : `${hour}`;
-    const priceColorStyle = getColor(price);
+    const priceColorStyle = getOverviewColor(price);
 
     // Opret HTML for hver time og pris og tilføj til priceHTML
     priceHTML += `<li>
         <p class="time">kl. ${currentHour}:00</p>
-        <p class="price" style="${priceColorStyle}">kl ${price} kr</p>
+        <p class="price" style="${priceColorStyle}">${price} kr</p>
       </li><br>`;
     }
 
     // Opdater listen over priser i HTML
     ListPrices.innerHTML = priceHTML
 
-} 
+    // console.log(ListPrices.innerHTML);
+
+}
+

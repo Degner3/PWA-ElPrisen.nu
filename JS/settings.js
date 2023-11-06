@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     
     let selectElement = document.getElementById("region");
-    let selectedRegionElement = document.getElementById("selectedRegion");
+    let selectedRegionElement = document.getElementById("selectedregion");
 
     // Lyt efter ændringer i select-elementet
     selectElement.addEventListener("change", function() {
@@ -12,3 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
         selectedRegionElement.textContent = selectedOption.textContent;
     });
 });
+
+
+
