@@ -20,7 +20,8 @@
     
     <!-- SW -->
     <link rel="manifest" href="/manifest.json">
-    <script src="/sw.js" defer></script>
+    <!-- <script src="/sw.js" defer></script> -->
+
 </head>
 <body>
     <nav class="navdash">
@@ -39,11 +40,42 @@
             <li><a href="/index.html">Lige nu</a></li>
             <li><a href="/historik.html">Historik</a></li>
         </ul>
-        <div>
-           <a class="settinglink" href="/settings.html">
+        <div id="btn">
+           <a class="settinglink" href="#">
                 <i class="fa-solid fa-gear"></i>
-            </a> 
+            </a>
         </div>
+        <!-- <a class="modal-open" href="#modal">Click To Open Regular Modal</a> -->
+        <!-- <div class="modal" id="modal">
+            <div class="modal-content">
+                <a href="#" class="modal-close" title="Close Modal">X</a>
+                <h3>indstillinger</h3>
+                <div class="moms">
+                    <p>priser inkl. moms</p>
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input">
+                        <span class="switch-label" data-on="On" data-off="Off"></span>
+                        <span class="switch-handle"></span>
+                    </label>
+                </div>
+                <div class="alarm">
+                    <p>laveste pris alarm</p>
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input">
+                        <span class="switch-label" data-on="On" data-off="Off"></span>
+                        <span class="switch-handle"></span>
+                    </label>
+                </div>
+                <div class="select">
+                    <p>vælg Region</p>
+                    <select id="region">
+                        <option disabled selected>VÆLG REGION</option>
+                        <option value="DK1"">Vest for Storbælt</option>
+                        <option value="DK2">Øst for Storbælt</option>
+                    </select>
+                </div>
+            </div>
+          </div> -->
     </nav>
     <main>
         <div class="box1">

@@ -92,26 +92,21 @@ const lowHighData = (data) => {
 
 // Funktion til at oprette en liste over elpriser
 const OverviewListPrice = (data) => {
+
   const ListPrices = document.getElementById('oversigtprices')
+  let hour = 0;
+  const price = Math.round(data[hour].DKK_per_kWh * 1000) / 1000;
+  const currentHour = hour < 10 ? `0${hour}` : `${hour}`;
+  const priceColorStyle = getOverviewColor(price);
 
-  let priceHTML = "";
 
-  for (let hour = 0; hour < data.length; hour++) {
-    const price = Math.round(data[hour].DKK_per_kWh * 1000) / 1000;
-    const currentHour = hour < 10 ? `0${hour}` : `${hour}`;
-    const priceColorStyle = getOverviewColor(price);
-
-    // Opret HTML for hver time og pris og tilføj til priceHTML
-    priceHTML += `<li>
-        <p class="time">kl. ${currentHour}:00</p>
-        <p class="price" style="${priceColorStyle}">${price} kr</p>
-      </li><br>`;
-    }
-
-    // Opdater listen over priser i HTML
-    ListPrices.innerHTML = priceHTML
-
-    // console.log(ListPrices.innerHTML);
+  data.map(() => {
+    ListPrices.innerHTML += `
+    <li>
+      <p class="time">kl. ${currentHour}:00</p>
+      <p class="price" style="${priceColorStyle}">${price} kr</p>
+    </li><br>`;
+  })
 
 }
 
